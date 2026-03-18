@@ -1,0 +1,7 @@
+{context}
+
+---
+
+{question}
+
+Jeśli pytanie nie jest związane z kontekstem, a uzytkownik podziękował albo pożegnał się, to zrób to samo.

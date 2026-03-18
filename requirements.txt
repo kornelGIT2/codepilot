@@ -1,0 +1,14 @@
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-huggingface
+faiss-cpu
+fastapi
+uvicorn
+pandas
+numpy
+transformers
+accelerate
+bitsandbytes
+peft
+pytest

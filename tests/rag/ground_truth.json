@@ -1,0 +1,24 @@
+{
+  "queries": [
+    {
+      "query": "useAuth hook usage",
+      "files": ["src\\features\\auth\\hooks\\useAuth.ts"]
+    },
+    {
+      "query": "Button component props",
+      "files": ["src\\components\\Button.tsx"]
+    },
+    {
+      "query": "form validation logic",
+      "files": ["src\\components\\Form\\FormValidation.ts"]
+    },
+    {
+      "query": "API call fetchUser",
+      "files": ["src\\services\\api\\userApi.ts"]
+    },
+    {
+      "query": "Redux store configuration",
+      "files": ["src\\store\\index.ts"]
+    }
+  ]
+}
