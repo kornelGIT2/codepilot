@@ -12,3 +12,4 @@ accelerate
 bitsandbytes
 peft
 pytest
+tree-sitter-languages
