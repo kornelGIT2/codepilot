@@ -76,3 +76,27 @@ With normalization, dot product corresponds to cosine similarity ranking.
 - Generation: `CYFRAGOVPL/Llama-PLLuM-8B-chat`
 - Runtime: PyTorch, Transformers, bitsandbytes, accelerate
 - Tests: Pytest
+
+## Run Without Reloading Model Weights
+
+Run the LLM as a dedicated service so API or LangGraph code changes do not reload model weights each time.
+
+1. Start model service (loads weights once):
+
+```bash
+python -m app.model_service
+```
+
+2. Start API service in another terminal:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+3. Optional: point API to different model service URL:
+
+```bash
+set MODEL_SERVICE_URL=http://127.0.0.1:8001
+```
+
+The API endpoint remains `POST /generate`, but generation is proxied to the dedicated model service at `POST /generate-stream`.
