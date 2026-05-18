@@ -22,7 +22,7 @@ graph TD;
         classDef last fill:#bfb6fc
 ```
 
-# Codebase Q&A Backend (RAG + FAISS)
+# Codebase Q&A Backend (LangGraph + RAG)
 
 Production-style backend for codebase question answering.  
 The system indexes repository code, retrieves relevant fragments with FAISS, and generates answers with a local chat model.
