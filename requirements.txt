@@ -13,3 +13,5 @@ bitsandbytes
 peft
 pytest
 tree-sitter-languages
+langgraph
+networkx

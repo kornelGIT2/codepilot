@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from app.services.genAI.rag.parser import parse_repo
+from app.rag.parser import parse_repo
 
 
 def test_parser_uses_python_ast_chunking(tmp_path: Path):

@@ -1,3 +1,27 @@
+## Architecture
+
+```mermaid
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+        __start__([<p>__start__</p>]):::first
+        retrieve(retrieve)
+        generate(generate)
+        verify(verify)
+        __end__([<p>__end__</p>]):::last
+        __start__ --> retrieve;
+        generate --> verify;
+        retrieve --> generate;
+        verify -. &nbsp;end&nbsp; .-> __end__;
+        verify -. &nbsp;regenerate&nbsp; .-> generate;
+        classDef default fill:#f2f0ff,line-height:1.2
+        classDef first fill-opacity:0
+        classDef last fill:#bfb6fc
+```
+
 # Codebase Q&A Backend (RAG + FAISS)
 
 Production-style backend for codebase question answering.  
@@ -76,27 +100,3 @@ With normalization, dot product corresponds to cosine similarity ranking.
 - Generation: `CYFRAGOVPL/Llama-PLLuM-8B-chat`
 - Runtime: PyTorch, Transformers, bitsandbytes, accelerate
 - Tests: Pytest
-
-## Run Without Reloading Model Weights
-
-Run the LLM as a dedicated service so API or LangGraph code changes do not reload model weights each time.
-
-1. Start model service (loads weights once):
-
-```bash
-python -m app.model_service
-```
-
-2. Start API service in another terminal:
-
-```bash
-uvicorn app.main:app --reload
-```
-
-3. Optional: point API to different model service URL:
-
-```bash
-set MODEL_SERVICE_URL=http://127.0.0.1:8001
-```
-
-The API endpoint remains `POST /generate`, but generation is proxied to the dedicated model service at `POST /generate-stream`.

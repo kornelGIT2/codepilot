@@ -2,23 +2,107 @@
   "queries": [
     {
       "query": "useAuth hook usage",
-      "files": ["src\\features\\auth\\hooks\\useAuth.ts"]
+      "files": ["src/features/auth/hooks/useAuth.ts"]
     },
     {
-      "query": "Button component props",
-      "files": ["src\\components\\Button.tsx"]
+      "query": "login form component",
+      "files": ["src/features/auth/components/LoginForm.tsx"]
     },
     {
-      "query": "form validation logic",
-      "files": ["src\\components\\Form\\FormValidation.ts"]
+      "query": "register form validation",
+      "files": ["src/features/auth/components/RegisterForm.tsx"]
     },
     {
-      "query": "API call fetchUser",
-      "files": ["src\\services\\api\\userApi.ts"]
+      "query": "auth provider and context",
+      "files": ["src/features/auth/providers/AuthProvider.tsx"]
     },
     {
-      "query": "Redux store configuration",
-      "files": ["src\\store\\index.ts"]
+      "query": "Redux auth slice state",
+      "files": ["src/features/auth/stores/authSlice.ts"]
+    },
+    {
+      "query": "login API request",
+      "files": ["src/features/auth/api/loginApi.ts"]
+    },
+    {
+      "query": "register API endpoint",
+      "files": ["src/features/auth/api/registerApi.ts"]
+    },
+    {
+      "query": "comment card display",
+      "files": ["src/features/comments/components/CommentCard.tsx"]
+    },
+    {
+      "query": "create comment form",
+      "files": ["src/features/comments/components/CreateComment.tsx"]
+    },
+    {
+      "query": "update comment form",
+      "files": ["src/features/comments/components/UpdateCommentForm.tsx"]
+    },
+    {
+      "query": "update comment hook",
+      "files": ["src/features/comments/hooks/useUpdateComment.ts"]
+    },
+    {
+      "query": "post preview component",
+      "files": ["src/features/post/components/PostPreview.tsx"]
+    },
+    {
+      "query": "posts list component",
+      "files": ["src/features/post/components/PostsList.tsx"]
+    },
+    {
+      "query": "posts list page",
+      "files": ["src/features/post/pages/PostsListPage.tsx"]
+    },
+    {
+      "query": "create post page",
+      "files": ["src/features/post/pages/CreatePost.tsx"]
+    },
+    {
+      "query": "update post page",
+      "files": ["src/features/post/pages/UpdatePost.tsx"]
+    },
+    {
+      "query": "post API methods",
+      "files": ["src/features/post/api/postApi.ts"]
+    },
+    {
+      "query": "search posts with pagination",
+      "files": ["src/features/post/hooks/useSearchPostsWithPagination.ts"]
+    },
+    {
+      "query": "user API service",
+      "files": ["src/features/users/api/userApi.ts"]
+    },
+    {
+      "query": "profile details component",
+      "files": ["src/features/users/components/ProfileDetails.tsx"]
+    },
+    {
+      "query": "pagination component",
+      "files": ["src/components/Pagination/Pagination.tsx"]
+    },
+    {
+      "query": "page spinner component",
+      "files": ["src/components/Elements/Spinner/PageSpinner.tsx"]
+    },
+    {
+      "query": "debounced input field",
+      "files": ["src/components/Form/DebouncedInputField.tsx"]
+    },
+    {
+      "query": "standard input field component",
+      "files": ["src/components/Form/InputField.tsx"]
+    },
+    {
+      "query": "application config exports",
+      "files": ["src/config/index.ts"]
+    },
+    {
+      "query": "cypress smoke test",
+      "files": ["cypress/e2e/smoke.cy.ts"]
     }
   ]
 }

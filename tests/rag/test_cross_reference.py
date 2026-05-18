@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 from langchain_core.documents import Document
 
-from app.services.genAI.rag.FAISS.load import RAGManager
+from app.llm.rag.FAISS.load import RAGManager
 
 
 class _FakeDocStore:

@@ -1,7 +1,7 @@
 import os
 import json
 import pytest
-from app.services.genAI.rag.FAISS.load import RAGManager  # Twój singleton
+from app.llm.rag.FAISS.load import RAGManager 
 
 
 # Wczytaj ground truth
@@ -15,10 +15,10 @@ ground_truth_files = [q["files"] for q in data["queries"]]
 @pytest.mark.parametrize("query, expected_files", zip(queries, ground_truth_files))
 def test_rag_recall(query, expected_files):
     rag = RAGManager()
-    docs = rag.vector_store.similarity_search(query, k=10)  # Pobierz top 10 wyników 
-    retrieved_files = [doc.metadata['file_path'] for doc in docs]  # Załóżmy, że metadata zawiera nazwę pliku
+    docs = rag.vector_store.similarity_search(query, k=10) 
+    retrieved_files = [doc.metadata['file_path'] for doc in docs]  
     print(retrieved_files)
-    # sprawdzamy, czy w zwróconym kontekście pojawiają się wszystkie pliki z ground truth
+   
     hits = [f for f in expected_files if f in retrieved_files]  
     recall = len(hits) / len(expected_files)
     
